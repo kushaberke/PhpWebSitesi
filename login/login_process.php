@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("../temp/config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
            session_start();
            $_SESSION['username'] = $username;
-            header("Location: index.php");
+            header("Location: ../home");
             exit();
 
         } else {
