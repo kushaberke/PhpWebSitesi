@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 // Giriş sayfasına yönlendirin
-header("Location: login.php");
+header("Location: ../login");
 exit();
 ?>
